@@ -1,0 +1,161 @@
+/* Mini Reset */
+* {
+    margin: 0; /* Espaçamento | distancia da borda para fora */
+    padding: 0; /* Espaçamento | distancia da borda para dentro */
+    border: 0; /* Utiliza espaço interno mantem tamanho widht e heidht */
+    box-sizing: border-box;
+}
+
+/* 
+# - Seletor por ID 
+div - Seletor por Nome da TAG
+. - Seletor por CLASSE
+*/
+
+body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+.area-logo {
+    height: 100px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+.area-nav {
+    height: 100%;
+    flex: 1;
+}
+
+.nav-list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-list-item {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: small;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.7;
+}
+
+.nav-list-item:hover {
+    color: #008248;
+    cursor: pointer;
+}
+
+.area-history {
+    height: 100%;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-history-img {
+    width: 100px;
+}
+
+.nav-store-location {
+    width: 160px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 75vw;
+    
+}
+
+.banner-area {
+    height: 420px;
+    background-image: url(../image/banner01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-text-area {
+    height: 100%;
+    width: 60%;
+    padding: 32px;
+    display: flex;
+    align-items: end;
+    color: #fff;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+.banner-text-left {
+    width: 100%;
+    height: 428px;
+    margin-top: 30px;
+    display: flex;
+}
+
+.banner-text {
+    background-color: #d4e9e2;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.banner-area-right{
+    width: 50%;
+}
+
+.banner-area-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-btn-area {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.banner-btn-area a {
+    padding: 8px 12px;
+    border: 2px solid #1E3932;
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+
+}
