@@ -68,9 +68,14 @@ body {
     letter-spacing: 0.7;
 }
 
-.nav-list-item:hover {
+.nav-list-item:hover a{
     color: #008248;
     cursor: pointer;
+}
+
+.nav-list-item a {
+    text-decoration: none;
+    color: black;
 }
 
 .area-history {
@@ -79,6 +84,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.area-history a img {
+    width: 118px;
 }
 
 .area-history-img {
@@ -94,13 +103,12 @@ body {
 }
 
 .content {
-    width: 75vw;
-    
+    width: 75vw; 
 }
 
 .banner-area {
     height: 420px;
-    background-image: url(../image/banner01.jpg);
+    background-image: url(../image/banner05.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -123,7 +131,6 @@ body {
     margin-top: 30px;
     display: flex;
 }
-
 
 .banner-text {
     background-color: #d4e9e2;
@@ -153,49 +160,82 @@ body {
 
 .banner-btn-area a {
     padding: 8px 12px;
-    border: 2px solid #1E3932;
+    border: 2px solid #E85451;
     border-radius: 30px;
     font-weight: bold;
     letter-spacing: 1.5px;
     font-size: 18px;
 }
 
+
  /* FOOTER - INICIO */
  
  
-.footer-area {
+ .footer-area {
     width: 100vw;
-    height: 500px;
+    height: 665px;
     display: flex;
-    border-bottom: 1px solid #ccc;
-    box-shadow: 0 -6px 6px -6px #222;
+    justify-content: center;
     margin-top: 30px;
+    padding-top: 50px;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -3px 6px -6px #222;
 }
 .footer-content {
-    display: flex;
+    width: 90%;
 }
 .footer-row{
+    height: auto;
+    width: 100%;
+    gap: 50px;
+}
+
+.flex-row{
     display: flex;
+    flex-direction: row;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;    
 }
 .footer-col{
-    display: flex;
-    margin-left: 50px;
-    padding: 30%;
-    white-space: nowrap;
+    width: 180px;
 }
+
+.col-title {
+    font-size: 1.8rem;
+}
+
+.img-col {
+    width: 120px;
+    height: 47.2812px;
+}
+
+.footer-title {
+    font-size: 1.8rem;
+    line-height: 1.41;
+    font-weight: 400;
+    margin-bottom: 2.4rem;
+    font-size: 20px;
+}
+
 .footer-col ul{
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    width: 180px;
+    margin-top: 40px;
 }
 .footer-col li{
-    display: flex;
-    padding: 8px;
+    list-style-type: none;
+    width: 180px;
 }
 .footer-col li a{
-    display: flex;
+    width: 100px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-decoration: none;
-    color: #B2B2B2;
-    font-size: 1.2rem;
-    line-height: 1.411;
+    color: rgba(0, 0, 0, .56);
 }
- 
