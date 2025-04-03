@@ -1,83 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+ 
+@font-face {
+    font-family:'SoDo Sans';
+    src: url('../fonts/SoDoSans-Bold.woff');
+    font-weight: bold;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family:'SoDo Sans';
+    src: url('../fonts/SoDoSans-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family:'SoDo Sans';
+    src: url('../fonts/SoDoSans-SemiBold.woff');
+    font-weight: 600;
+    font-style: normal;
+}
+ 
 /* Mini Reset */
 * {
-    margin: 0; /* Espaçamento | distancia da borda para fora */
-    padding: 0; /* Espaçamento | distancia da borda para dentro */
-    border: 0; /* Utiliza espaço interno mantem tamanho widht e heidht */
+    margin: 0;/* Espaçamento | distancia da borda para fora*/
+    padding: 0;/* Espaçamento | distancia da borda para dentro*/
+    border: 0;/* Utiliza espaço interno mantem tamanho widht e height*/
     box-sizing: border-box;
 }
-
-/* 
-# - Seletor por ID 
-div - Seletor por Nome da TAG
-. - Seletor por CLASSE
+ 
+/*
+    # - Seletor por ID
+    div - Seletor por Nome da TAG
+    . - Seletor por CLASSE
+    vw - viwerport - De acordo com o tamanho pai ela mantém o tamanho
 */
-
+ 
 body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.area-header {
+header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+.area-header {   /* border-bottom 1px solid #ccc  + box-shadow:  0 6px 6px -6px  #222 borda com sombras no header*/
     height: 100px;
     width: 100%;
     display: flex;
     padding-left: 4rem;
     padding-right: 4rem;
     border-bottom: 1px solid #ccc;
-    box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 2px 6px -6px  #222;
+   
 }
-
 .area-logo {
-    height: 100px;
-    width: 120px;
+    height: 100%;
+    width: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+ 
 }
-
 .area-logo-img {
     width: 50px;
     height: 50px;
+   
 }
-
-.area-nav {
+.area-nav{
     height: 100%;
     flex: 1;
 }
-
 .nav-list {
+    margin-left: 80px;
     height: 100%;
-    width: 100%;
+    width: 120%;
     display: flex;
     list-style: none;
-    gap: 10px;
+    gap: 20px;
+ 
 }
-
 .nav-list-item {
     padding: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: small;
+    font-size: 24px;
     color: black;
     text-transform: uppercase;
     letter-spacing: 0.7;
 }
-
 .nav-list-item:hover a{
     color: #008248;
-    cursor: pointer;
+    cursor:pointer;
+ 
 }
-
-.nav-list-item a {
+.nav-list-item a{
     text-decoration: none;
-    color: black;
+    color: #222;
+    font-size: 13px;
+    font-family:'SoDo sans';
+ 
 }
-
 .area-history {
     height: 100%;
     width: 120px;
@@ -85,55 +118,55 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-.area-history a img {
-    width: 118px;
+.area-history a img{
+    width: 120px;
 }
-
-.area-history-img {
-    width: 100px;
-}
-
 .nav-store-location {
     width: 160px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
-
+.store-location{
+    height: 30px;
+    width: 120px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+    font-family:'SoDo sans';
+ 
+}
 .content {
-    width: 75vw; 
+    width: 75vw;
 }
-
 .banner-area {
-    height: 420px;
-    background-image: url(../image/banner05.jpg);
+    height: 428px;
+    background-image: url('../image/banner01.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
-.banner-text-area {
+.banner-text-area{
     height: 100%;
     width: 60%;
     padding: 32px;
     display: flex;
-    align-items: end;
+    align-items: end;    
     color: #fff;
     font-size: 64px;
     text-transform: uppercase;
 }
-
 .banner-text-left {
     width: 100%;
     height: 428px;
     margin-top: 30px;
     display: flex;
 }
-
 .banner-text {
-    background-color: #d4e9e2;
+    background-color: #D4E9E2;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -141,23 +174,19 @@ body {
     align-items: center;
     gap: 32px;
 }
-
-.banner-area-right{
+.banner-area-right {
     width: 50%;
 }
-
 .banner-area-right img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .banner-btn-area {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-
 .banner-btn-area a {
     padding: 8px 12px;
     border: 2px solid #E85451;
@@ -166,76 +195,90 @@ body {
     letter-spacing: 1.5px;
     font-size: 18px;
 }
-
-
- /* FOOTER - INICIO */
- 
- 
- .footer-area {
+.spanbox {
+    font-weight: 800;
+}
+/* FOOTER - INICIO */
+.footer-area{
     width: 100vw;
     height: 665px;
     display: flex;
-    justify-content: center;
     margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 -2px 6px -6px  #222;
+ 
     padding-top: 50px;
-    border-top: 1px solid #ccc;
-    box-shadow: 0 -3px 6px -6px #222;
+    justify-content: center;
 }
 .footer-content {
     width: 90%;
 }
-.footer-row{
+.footer-row {
     height: auto;
-    width: 100%;
-    gap: 50px;
+    width: 200%;
+    gap: 70px;
 }
-
-.flex-row{
+.flex-row {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
-
-.flex-col{
+.flex-col {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
-.footer-col{
-    width: 180px;
+.footer-col {
+    min-width: 180px;
 }
-
 .col-title {
-    font-size: 1.8rem;
-}
-
-.img-col {
-    width: 120px;
-    height: 47.2812px;
-}
-
-.footer-title {
     font-size: 1.8rem;
     line-height: 1.41;
     font-weight: 400;
     margin-bottom: 2.4rem;
     font-size: 20px;
+   
+   
 }
-
-.footer-col ul{
+.footer-col ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
     list-style: none;
     width: 180px;
     margin-top: 40px;
+   
 }
-.footer-col li{
+.footer-col li {
     list-style-type: none;
     width: 180px;
+ 
 }
-.footer-col li a{
-    width: 100px;
+.footer-col li a {
+    width: 180px;
     padding-top: 12px;
     padding-bottom: 12px;
     text-decoration: none;
-    color: rgba(0, 0, 0, .56);
+    color: rgba(0,0,0, .56);
+}
+.footer-col a img{
+    width: 120px;
+}
+
+.separator {
+    width: 100%;
+    height: 2px;
+    opacity: 20%;
+    background-color: #222;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.footer-col i {
+    font-size: 36px;
+    margin-right: 12px;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: black;
 }
